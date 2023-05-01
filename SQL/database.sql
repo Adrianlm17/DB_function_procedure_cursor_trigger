@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `bibliotecas` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `direccion` varchar(255) DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
-  `total_libros` int(11),
   `estanteria_id` bigint(20) DEFAULT NULL,
+  `total_libros` int(11),
   PRIMARY KEY (`id`),
   KEY `FKghl05lfc9xofovn24l38kovnc` (`estanteria_id`),
   CONSTRAINT `FKghl05lfc9xofovn24l38kovnc` FOREIGN KEY (`estanteria_id`) REFERENCES `estanterias` (`id`)
