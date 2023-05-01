@@ -28,6 +28,15 @@ CREATE TABLE IF NOT EXISTS `autores` (
 
 -- La exportación de datos fue deseleccionada.
 
+-- Volcando estructura para tabla biblioteca.estanterias
+CREATE TABLE IF NOT EXISTS `estanterias` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- La exportación de datos fue deseleccionada.
+
 -- Volcando estructura para tabla biblioteca.bibliotecas
 CREATE TABLE IF NOT EXISTS `bibliotecas` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -38,15 +47,6 @@ CREATE TABLE IF NOT EXISTS `bibliotecas` (
   PRIMARY KEY (`id`),
   KEY `FKghl05lfc9xofovn24l38kovnc` (`estanteria_id`),
   CONSTRAINT `FKghl05lfc9xofovn24l38kovnc` FOREIGN KEY (`estanteria_id`) REFERENCES `estanterias` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- La exportación de datos fue deseleccionada.
-
--- Volcando estructura para tabla biblioteca.estanterias
-CREATE TABLE IF NOT EXISTS `estanterias` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `descripcion` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- La exportación de datos fue deseleccionada.
